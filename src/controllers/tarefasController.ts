@@ -9,13 +9,13 @@ export const listarTarefas = (req: Request, res: Response) => {
 
 
 export const criarTarefa = (req: Request, res: Response) => {
-  const { titulo, descricao } = req.body;
+  const { titulo, descricao, status} = req.body;
 
   const novaTarefa: Tarefa = {
     id: tarefas.length + 1,
     titulo,
     descricao,
-    status: false
+    status
   };
 
   tarefas.push(novaTarefa);
